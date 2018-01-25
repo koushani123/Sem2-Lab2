@@ -1,4 +1,4 @@
-include <iostream>
+#include <iostream>
 using namespace std;
 //Programme to implement doubly linked list
 
@@ -8,15 +8,15 @@ struct node{
 	int data;
 	node *prev;
 	node *next;
-}
+};
 //The class of linkedList
 class linkedList{
-	private;
+	private:
 	node *head,*tail;
 	public:
 	linkedList(){
-		head=NULL
-		tail=NULL
+		head=NULL;
+		tail=NULL;
 	}
 	//Function to add a node:Addition function
 	
@@ -36,6 +36,7 @@ void insertnode(int n2, int pos1){
 	int count = 1;
 	node *cur = new node;
 	node *pr = new node;
+	node *temp = new node;
 	temp->data=n2;
 	temp->prev=NULL;
 	temp->next=NULL;
@@ -44,7 +45,7 @@ void insertnode(int n2, int pos1){
 		while(count!=pos1){
 			pr=cur;
 			cur=cur->next;
-			curr->prev=pr;
+			cur->prev=pr;
 			count++;
 		}
 		temp->next=cur;
@@ -53,7 +54,7 @@ void insertnode(int n2, int pos1){
 		cur->prev=temp;
 	}
 	else if(countnode ()<pos1){
-		count<<"The node doesnt exist"<<endl;
+		cout<<"The node doesnt exist"<<endl;
 	}
 }
 //Function for counting the number of elements in a node:Counting node
@@ -82,10 +83,11 @@ void displaynode(){
 		cout<<temp->data<<"->";
 		temp = temp->next;
 	}
-	cout<<"NULL"<<""\n"
+	cout<<"NULL"<<"\n";
 	}
 	//Function to delete elements of a node at the end:Delete function
 	void deleteat (int pos2){
+		int count=1;
 		node *temp=new node;
 		node *cur=new node;
 		node *pr=new node;
@@ -105,7 +107,7 @@ void displaynode(){
 //Ultimate function for the program
 int main(){
 	int n2, pos1, pos2;
-	linkedList 1;
+	linkedList l;
 	l.addnode(1);
 	l.addnode(2);
 	l.addnode(3);
