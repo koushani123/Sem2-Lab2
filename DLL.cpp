@@ -115,7 +115,14 @@ int main(){
 	l.countnode();
 	cin<<n2<pos1;
 	l.insertnode(n2,pos1);
-	cout<<"after insertion of the node at"<<pos1<<"with the value of"<<n2<<":"
+	cout<<"after insertion of the node at"<<pos1<<"with the value of"<<n2<<":"<<endl;
+	l.displaynode();l.deletenode();
+	cout<<"after the deletion of the node in at the end :"<<endl;
+	l.displaynode();
+	cin>>pos2;
+	l.deleteat(pos2);
+	cout<<"after the deletion of the node at"<<pos2<<":"<<endl;
+	l.displaynode();
+	return 0;
 }
-		}
-	}
+
